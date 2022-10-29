@@ -139,7 +139,7 @@ def Public():
 	elif pil in ['2','02']:
 		try:
 			cookie=input(" [+] Cookie : ")
-			data = requests.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48 .0 KAIOS/2.5","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "en-US, en;q=0.9","cache-control": "max-age=0","accept":"text /htnl , application/xhtml +xnl, application/xnl; q=0.9, inage/avif , image/webp, inage/apng.*/*;q=0.8, applica
+			data = requests.get("https://m.facebook.com/m_locations", headers = {"user-agent": "Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48 .0 KAIOS/2.5","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "en-US, en;q=0.9","cache-control": "max-age=0","accept":"text /htnl , application/xhtml +xnl, application/xnl; q=0.9, inage/avif , image/webp, inage/apng.*/*;q=0.8, applica
 n/signed-exchange; v=b3;q=0.9,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8","content-type":"text /html: charset=utf-8"}, cookies = {"cookie":cookie}) 
 			find_token = re.search("(EAAG\w+)", data.text)
 			ken=open(".token.txt", "w").write(find_token.group(1))
